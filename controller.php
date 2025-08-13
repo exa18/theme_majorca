@@ -14,8 +14,8 @@ class Controller extends Package
 {
 
 	protected $pkgHandle = 'theme_majorca';
-	protected $appVersionRequired = '8.0.0';
-	protected $pkgVersion = '1.0.2';
+	protected $appVersionRequired = '9.0.0';
+	protected $pkgVersion = '2.0.0';
 	protected $pkgAllowsFullContentSwap = true;
 
 	public function getPackageDescription()

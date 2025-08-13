@@ -1,1 +1,12 @@
 .DS_Store
+**/config/database.php
+**/config/doctrine/*
+**/config/generated*/*
+concrete/*
+updates/*
+**/files/cache/*
+**/files/tmp/*
+application/files/*
+*.zip
+/sitemap.xml
+.vscode/*

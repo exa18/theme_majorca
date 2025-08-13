@@ -141,7 +141,7 @@ if (isset($breadcrumbs) && $breadcrumbs) { ?>
     </div>
 
     <?php if (isset($pagination)) { ?>
-        <?//=$pagination?>
+        <?php //=$pagination?>
         <?php
 			$pagination = $list->getPagination();
 			if ($pagination->getTotalPages() > 1) {
