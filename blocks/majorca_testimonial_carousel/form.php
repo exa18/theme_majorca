@@ -283,6 +283,9 @@ $id = $controller->getIdentifier();
     }
 </style>
 
+<div class="tab-content">
+
+<div id="<?php echo $tabs[0][0]?>" class="tab-pane active" role="tabpanel">
 <div id="ccm-tab-content-slides-<?php echo $getString?>" class="ccm-tab-content">
     <div class="majorca-testimonial-carousel-block-container">
         <div class="majorca-testimonial-carousel-entries majorca-testimonial-carousel-entries-<?php echo $bID?>">
@@ -294,7 +297,7 @@ $id = $controller->getIdentifier();
     </div>
 </div>
 
-<div id="ccm-tab-content-options-<?php echo $getString?>" class="ccm-tab-content">
+<div id="<?php echo $tabs[1][0]?>" class="tab-pane" role="tabpanel">
     <label class="control-label"><?php echo t('Navigation'); ?></label>
     <div class="form-group">
         <div class="radio">
@@ -361,6 +364,8 @@ $id = $controller->getIdentifier();
         <?php echo $form->number($view->field('slidesToShow'), $slidesToShow ? $slidesToShow : 3, array('min' => '1', 'max' => '4'))?>
         </div>
     </div>
+</div>
+
 </div>
 
 <script type="text/template" id="testimonialCarouselTemplate-<?php echo $bID?>">
