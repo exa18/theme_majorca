@@ -266,7 +266,9 @@ echo $app->make('helper/concrete/ui')->tabs($tabs);
     }
 </style>
 
-<div id="ccm-tab-content-slides-<?php echo $getString?>" class="ccm-tab-content">
+<div class="tab-content">
+
+<div id="<?php echo $tabs[0][0]?>" class="tab-pane active" role="tabpanel">
     <div class="ccm-image-slider-block-container">
         <div class="ccm-image-slider-entries ccm-image-slider-entries-<?php echo $bID?>">
 
@@ -277,7 +279,7 @@ echo $app->make('helper/concrete/ui')->tabs($tabs);
     </div>
 </div>
 
-<div id="ccm-tab-content-options-<?php echo $getString?>" class="ccm-tab-content">
+<div id="<?php echo $tabs[1][0]?>" class="tab-pane" role="tabpanel">
     <label class="control-label"><?php echo t('Navigation'); ?></label>
     <div class="form-group">
         <div class="radio">
@@ -382,6 +384,8 @@ Max 4 for Carousel Slider.')); ?>
             </label>
         </div>
     </div>
+
+</div>
 
 </div>
 
