@@ -14,8 +14,8 @@ class Controller extends Package
 {
 
 	protected $pkgHandle = 'theme_majorca';
-	protected $appVersionRequired = '8.0.0';
-	protected $pkgVersion = '1.0.2';
+	protected $appVersionRequired = '9.0.0';
+	protected $pkgVersion = '1.1.0';
 	protected $pkgAllowsFullContentSwap = true;
 
 	public function getPackageDescription()
@@ -114,9 +114,11 @@ class Controller extends Package
 
         //install or upgrade ThumbnailType
         $thumbnailTypes = array(
-                            array('name' => 'Small','handle' => 'small', 'width' => 740),
-                            array('name' => 'Medium','handle' => 'medium', 'width' => 940),
-                            array('name' => 'Large','handle' => 'large', 'width' => 1140),
+                            array('name' => 'XSmall','handle' => 'xsmall', 'width' => 450),
+                            array('name' => 'Small','handle' => 'small', 'width' => 800),
+                            array('name' => 'Medium','handle' => 'medium', 'width' => 1000),
+                            array('name' => 'Large','handle' => 'large', 'width' => 1400),
+                            array('name' => 'XLarge','handle' => 'xlarge', 'width' => 2000),
                          );
         foreach($thumbnailTypes as $tt){
 		    $em = $this->app->make('Doctrine\ORM\EntityManagerInterface');
