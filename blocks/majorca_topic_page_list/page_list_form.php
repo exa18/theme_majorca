@@ -22,10 +22,10 @@ $form = $app->make('helper/form/page_selector');
     //array('page-list-preview', t('Preview'))
 ));?>
 
-<div class="ccm-tab-content" id="ccm-tab-content-page-list-settings">
-    <div class=" pagelist-form">
+<div class="tab-content">
+<div class="tab-pane active pagelist-form" id="page-list-settings" role="tabpanel">
 
-        <input type="hidden" name="pageListToolsDir" value="<?php echo $app->make('helper/concrete/urls')->getBlockTypeToolsURL($bt) ?>/"/>
+        <input type="hidden" name="pageListToolsDir" value="<?php echo $app->make('helper/concrete/urls')->getBlockTypeAssetsURL($bt) ?>/"/>
 
         <fieldset>
 <!---------------------------------------------------------------------------->
@@ -612,7 +612,6 @@ $form = $app->make('helper/form/page_selector');
         var treeViewTemplate = $('.tree-view-template');
 
         $('select[name=customTopicAttributeKeyHandle]').on('change', function() {
-            var toolsURL = '<?php echo $app->make('helper/concrete/urls')->getToolsURL('tree/load'); ?>';
             var chosenTree = $(this).find('option:selected').attr('data-topic-tree-id');
             $('.tree-view-template').remove();
             if (!chosenTree) {
